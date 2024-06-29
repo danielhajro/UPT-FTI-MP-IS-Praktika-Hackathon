@@ -1,0 +1,144 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212; /* Dark background for the entire page */
+    color: #fff; /* White text color */
+}
+
+/* Section styling */
+.full {
+    background-color: #6a1b9a; /* Dark purple background */
+    min-height: 100vh; /* Ensure minimum viewport height coverage */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding to center content */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+/* Form container styling */
+.dev-form-container {
+    max-width: 600px;
+    width: 100%; /* Ensure full width responsiveness */
+    background-color: rgba(26, 20, 20, 0.8); /* Darkened background with transparency */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    color: #fff;
+    overflow: auto; /* Enable scrolling if content exceeds container */
+}
+
+.dev-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dev-form-container form div {
+    margin-bottom: 20px;
+}
+
+.dev-form-container label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.dev-form-container input[type="text"],
+.dev-form-container input[type="email"],
+.dev-form-container input[type="file"],
+.dev-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter background for inputs */
+    color: #fff; /* White text color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.dev-form-container input[type="text"]:focus,
+.dev-form-container input[type="email"]:focus,
+.dev-form-container input[type="file"]:focus,
+.dev-form-container textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly lighter background on focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Enhanced shadow on focus */
+    outline: none;
+}
+
+.dev-form-container input[type="text"]:valid,
+.dev-form-container input[type="email"]:valid,
+.dev-form-container textarea:valid {
+    background-color: rgba(46, 204, 113, 0.3); /* Light green background when input is valid */
+    box-shadow: none; /* Remove shadow when input is valid */
+    transition: background-color 0.3s;
+}
+
+.dev-form-container input[type="text"]:valid:focus,
+.dev-form-container input[type="email"]:valid:focus,
+.dev-form-container textarea:valid:focus {
+    background-color: rgba(46, 204, 113, 0.4); /* Slightly darker green on focus when input is valid */
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Increased gap between items */
+}
+
+.skill-row div {
+    flex: 1;
+}
+
+.skill-row .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.skill-row .buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff; /* White text color */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.skill-row .buttons button:first-child {
+    background-color: #1976d2; /* Blue color for add button */
+}
+
+.skill-row .buttons button:last-child {
+    background-color: #f44336; /* Red color for delete button */
+}
+
+.skill-row .buttons button:hover {
+    opacity: 0.8; /* Slightly reduce opacity on hover for visual feedback */
+}
+
+.skill-row .buttons button:disabled {
+    opacity: 0.5; /* Reduce opacity for disabled buttons */
+    cursor: not-allowed;
+}
+
+.dev-form-container button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50; /* Green submit button */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.dev-form-container button[type="submit"]:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}

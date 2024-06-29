@@ -1,0 +1,52 @@
+<body>
+  <div class="devs">
+    <h2>Developers</h2>
+    <a routerLink="/newdev">
+      <button>
+        <span class="transition edit"></span>
+        <span class="gradient"></span>
+        <span class="label">Add new Developer</span>
+      </button>
+    </a> <br> <br>
+    <table class="devs-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Email</th>
+          <th>Picture</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of persons">
+          <td>{{ person.personId }}</td>
+          <td>{{ person.name }}</td>
+          <td>{{ person.surname }}</td>
+          <td>{{ person.email }}</td>
+          <td><img [src]="person.profilePicture ? person.profilePicture : 'https://via.placeholder.com/50'" alt="{{ person.name }} {{ person.surname }}"></td>
+          <td>
+            <button (click)="editPerson(person.personId)">
+              <span class="transition"></span>
+              <span class="gradient"></span>
+              <span class="label">Edit</span>
+            </button>
+            <a [routerLink]="['/delete-dev', person.personId]">
+              <button>
+                <span class="transition red"></span>
+                <span class="gradient"></span>
+                <span class="label">Delete</span>
+              </button>
+            </a>
+            <button (click)="printPersonPDF(person.personId)">
+              <span class="transition edit"></span>
+              <span class="gradient"></span>
+              <span class="label">PDF</span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>

@@ -1,0 +1,43 @@
+<section class="full">
+  <div class="dev-form-container">
+    <h2>Edit Developer</h2>
+    <form [formGroup]="devForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name" />
+      </div>
+      <div>
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" formControlName="surname" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" />
+      </div>
+
+      <div formArrayName="skills">
+        <div *ngFor="let skill of skills.controls; let i = index" [formGroupName]="i" class="skill-row">
+          <div>
+            <label for="skill">Skill:</label>
+            <input type="text" id="skill" formControlName="skill" />
+          </div>
+          <div>
+            <label for="experience">Experience (years):</label>
+            <input type="text" id="experience" formControlName="experience" />
+          </div>
+          <div class="buttons">
+            <button type="button" (click)="addSkill()">+</button>
+            <button type="button" (click)="removeSkill(i)">-</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="profilePicture">Profile Picture:</label>
+        <input id="profilePicture" type="file" (change)="onFileChange($event)" accept="image/jpeg, image/png" />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>

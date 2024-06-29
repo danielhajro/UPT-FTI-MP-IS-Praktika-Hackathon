@@ -1,0 +1,48 @@
+<body>
+    <div class="devs">
+        <h2>Projects</h2>
+        <a routerLink="/newproject">
+            <button>
+                <span class="transition edit"></span>
+                <span class="gradient"></span>
+                <span class="label">Add new Project</span>
+              </button>
+        </a> <br> <br>
+        <!-- src/app/components/project-list/project-list.component.html -->
+<div class="project-table-container">
+    <table class="devs-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+          <td>{{ project.projectId }}</td>
+          <td>{{ project.projectName }}</td>
+          <td>{{ project.description }}</td>
+          <td>
+            <button (click)="editProject(project.projectId)">
+              <span class="transition"></span>
+              <span class="gradient"></span>
+              <span class="label">Edit</span>
+            </button>
+            <a [routerLink]="['/delete-project', project.projectId]">
+              <button>
+                <span class="transition red"></span>
+                <span class="gradient"></span>
+                <span class="label">Delete</span>
+              </button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+      
+    </table>
+  </div>
+  
+    </div>    
+    </body>

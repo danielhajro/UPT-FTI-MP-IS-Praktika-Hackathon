@@ -1,0 +1,56 @@
+.delete-project-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .delete-project-dialog {
+    background-color: #fff; /* White background for dialog */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    max-width: 400px; /* Maximum width of the dialog */
+    width: 100%;
+    text-align: center;
+  }
+  
+  .delete-project-message {
+    font-size: 18px; /* Message font size */
+    margin-bottom: 20px; /* Space below the message */
+  }
+  
+  .button-group {
+    display: flex; /* Display buttons in a row */
+    justify-content: center; /* Center buttons horizontally */
+  }
+  
+  .delete-button,
+  .cancel-button {
+    padding: 10px 20px; /* Padding inside buttons */
+    margin: 0 10px; /* Space between buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  .delete-button {
+    background-color: #f44336; /* Red background for delete button */
+    color: #fff; /* White text color */
+  }
+  
+  .cancel-button {
+    background-color: #ccc; /* Light gray background for cancel button */
+    color: #333; /* Darker text color */
+  }
+  
+  .delete-button:hover,
+  .cancel-button:hover {
+    opacity: 0.8; /* Reduce opacity on hover for visual feedback */
+  }
+  
